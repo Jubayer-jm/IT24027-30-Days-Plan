@@ -1,0 +1,7 @@
+Name: Jubayer
+Age: 23
+University: MBSTU
+City: Tangail
+Country: Bangladesh
+
+=== Code Execution Successful ===
