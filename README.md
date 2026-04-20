@@ -95,7 +95,7 @@ Day #02
 
 Topic : Access Modifiers (public, private, protected, default), Non-Access Modifiers (static, final, abstract)
 
-Source Code :
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%202
 
 Video : https://www.youtube.com/watch?v=lWFzm8qIR1c
 
@@ -190,7 +190,7 @@ Day #03
 
 Topic : Encapsulation (Basic Example), Encapsulation + Access Modifiers (Full Example)
 
-Source Code :
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%203
 Video : https://www.youtube.com/watch?v=HZUUYnIZO_0
 
 Example #01
