@@ -1,0 +1,8 @@
+Animal eats food
+Dog barks
+Puppy weeps
+------
+Animal eats food
+Cat meows
+
+=== Code Execution Successful ===
