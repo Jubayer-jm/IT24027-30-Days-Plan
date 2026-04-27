@@ -284,3 +284,309 @@ public class Main { public static void main(String[] args) {
     s1.display();
 }
 }
+
+Day #04
+
+Topic : Default / No-Argument Constructor, Parameterized Constructor
+
+Source Code : https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%204
+
+Video : https://www.youtube.com/watch?v=acfR5vRTZvc
+
+Example #01
+
+class Student {
+
+String name;
+int age;
+
+// No-argument constructor
+Student() {
+    name = "jubayer";
+    age = 23;
+}
+
+void display() {
+    System.out.println("Name: " + name);
+    System.out.println("Age: " + age);
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    // Constructor automatically called
+    Student s1 = new Student();
+
+    s1.display();
+}
+}
+
+Example #02
+
+// Code 2: Parameterized Constructor
+
+class Car {
+
+String color;
+int speed;
+
+// Parameterized constructor
+Car(String c, int s) {
+    color = c;
+    speed = s;
+}
+
+void display() {
+    System.out.println("Color: " + color);
+    System.out.println("Speed: " + speed);
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    // Passing values during object creation
+    Car c1 = new Car("Red", 120);
+    Car c2 = new Car("Blue", 100);
+
+    c1.display();
+    System.out.println("------");
+    c2.display();
+}
+}
+
+Date : 24/04/2025
+
+Day #05
+
+Topic : Single Inheritance + Method Overriding, Multilevel + Hierarchical Inheritance
+
+Source Code : https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%205
+
+Video : https://www.youtube.com/watch?v=j_VA2Rp6jM0
+
+Example #01
+
+// Code 1: Single Inheritance
+
+class Animal {
+
+String name = "Animal";
+
+void eat() {
+    System.out.println(name + " is eating");
+}
+
+void sound() {
+    System.out.println("Animal makes sound");
+}
+}
+
+// Dog inherits Animal class Dog extends Animal {
+
+// Method overriding
+@Override
+void sound() {
+    System.out.println("Dog barks");
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    Dog d1 = new Dog();
+
+    // Inherited method
+    d1.eat();
+
+    // Overridden method
+    d1.sound();
+}
+}
+
+Example #02
+
+// Code 2: Multilevel and Hierarchical Inheritance
+
+class Animal {
+
+void eat() {
+    System.out.println("Animal eats food");
+}
+}
+
+// Multilevel Inheritance class Dog extends Animal {
+
+void bark() {
+    System.out.println("Dog barks");
+}
+}
+
+class Puppy extends Dog {
+
+void weep() {
+    System.out.println("Puppy weeps");
+}
+}
+
+// Hierarchical Inheritance class Cat extends Animal {
+
+void meow() {
+    System.out.println("Cat meows");
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    Puppy p1 = new Puppy();
+
+    p1.eat();   // from Animal
+    p1.bark();  // from Dog
+    p1.weep();  // own method
+
+    System.out.println("------");
+
+    Cat c1 = new Cat();
+
+    c1.eat();   // from Animal
+    c1.meow();  // own method
+}
+}
+
+Date : 25/04/2025
+
+Day #06
+
+Topic : Compile-Time Polymorphism (Method Overloading), Runtime Polymorphism (Method Overriding)
+
+Source Code : https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%206
+Video : https://www.youtube.com/watch?v=bLke13zY4rg&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=7
+
+Example #01
+
+// Code 1: Compile-Time Polymorphism (Method Overloading)
+
+class MathOperation {
+
+// Method 1
+void add(int a, int b) {
+    System.out.println("Sum = " + (a + b));
+}
+
+// Method 2 (same name, different parameters)
+void add(int a, int b, int c) {
+    System.out.println("Sum = " + (a + b + c));
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    MathOperation obj = new MathOperation();
+
+    obj.add(5, 10);
+    obj.add(5, 10, 15);
+}
+}
+
+Example #02
+
+// Code 2: Runtime Polymorphism (Method Overriding)
+
+class Animal {
+
+void sound() {
+    System.out.println("Animal makes sound");
+}
+}
+
+class Dog extends Animal {
+
+@Override
+void sound() {
+    System.out.println("Dog barks");
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    Animal a;
+
+    // Parent reference, child object
+    a = new Dog();
+
+    // Runtime decides which method runs
+    a.sound();
+}
+}
+
+Date : 26/04/2025
+
+Day #07
+
+Topic : Abstraction using Abstract Class, Abstraction using Interface
+
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%207
+
+Video : https://www.youtube.com/watch?v=1SXyi3DK-88&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=8
+
+Example #01
+
+// Code 1: Abstraction using Abstract Class
+
+abstract class Animal {
+
+// Abstract method (no body)
+abstract void sound();
+
+// Normal method
+void eat() {
+    System.out.println("Animal eats food");
+}
+}
+
+class Dog extends Animal {
+
+// Implementing abstract method
+@Override
+void sound() {
+    System.out.println("Dog barks");
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    Dog d1 = new Dog();
+
+    d1.eat();
+    d1.sound();
+}
+}
+
+Example #02
+
+// Code 2: Interface Example
+
+interface Vehicle {
+
+// Abstract methods
+void start();
+void stop();
+}
+
+class Car implements Vehicle {
+
+public void start() {
+    System.out.println("Car starts");
+}
+
+public void stop() {
+    System.out.println("Car stops");
+}
+}
+
+public class Main { public static void main(String[] args) {
+
+    Car c1 = new Car();
+
+    c1.start();
+    c1.stop();
+}
+}
