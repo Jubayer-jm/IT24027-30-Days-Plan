@@ -5,7 +5,7 @@ class Student {
 
     // No-argument constructor
     Student() {
-        name = "Khalid";
+        name = "jubayer";
         age = 23;
     }
 
