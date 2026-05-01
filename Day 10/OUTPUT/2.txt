@@ -1,0 +1,2 @@
+First color: Red
+Colors List: [Red, Blue]

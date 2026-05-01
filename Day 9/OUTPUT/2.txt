@@ -1,0 +1,4 @@
+Animals: [Dog, Cat, Elephant]
+Colors: [Red, Green, Blue]
+Age Map: {Alice=30, Bob=25, Charlie=35}
+Alice's Age: 30
