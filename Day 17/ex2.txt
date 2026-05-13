@@ -1,0 +1,48 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        FileInputStream fileInputStream = null;
+
+        try {
+
+            // Open file
+            fileInputStream =
+                    new FileInputStream("example.txt");
+
+            int byteData;
+
+            // Read bytes until end of file
+            while((byteData =
+                    fileInputStream.read()) != -1) {
+
+                // Convert byte to character
+                System.out.print((char) byteData);
+            }
+
+        }
+        catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+        finally {
+
+            // Close stream
+            if(fileInputStream != null) {
+
+                try {
+
+                    fileInputStream.close();
+                }
+                catch (IOException e) {
+
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}

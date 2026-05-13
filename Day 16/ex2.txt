@@ -1,0 +1,36 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try{
+
+            FileWriter writer =
+                    new FileWriter("output.txt");
+
+            BufferedWriter bufferedWriter =
+                    new BufferedWriter(writer);
+
+            bufferedWriter.write("Hello, World!");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write(
+                    "This is a Java file handling example.");
+
+            bufferedWriter.close();
+
+            System.out.println(
+                    "Data written successfully.");
+
+        }
+        catch(IOException e){
+
+            System.out.println(
+                    "An error occurred: " +
+                            e.getMessage());
+        }
+    }
+}

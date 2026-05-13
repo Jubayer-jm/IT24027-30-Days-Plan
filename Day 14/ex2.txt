@@ -1,0 +1,42 @@
+import java.util.HashMap;
+
+public class IT24013 {
+
+    private HashMap<Integer, String> orders;
+
+    // Constructor
+    public IT24013() {
+        orders = new HashMap<>();
+    }
+
+    // Add order
+    public void addOrder(int orderId, String customerName) {
+
+        orders.put(orderId, customerName);
+    }
+
+    // Display orders
+    public void displayOrders() {
+
+        System.out.println("Customer Orders:");
+
+        for(int orderId : orders.keySet()) {
+
+            System.out.println("Order ID: " +
+                    orderId +
+                    ", Customer Name: " +
+                    orders.get(orderId));
+        }
+    }
+
+    public static void main(String[] args) {
+
+        IT24013 orderManagement =
+                new IT24013();
+
+        orderManagement.addOrder(101, "Alice");
+        orderManagement.addOrder(102, "Bob");
+
+        orderManagement.displayOrders();
+    }
+}

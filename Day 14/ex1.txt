@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class IT24013 {
+
+    private ArrayList<String> books;
+
+    // Constructor
+    public IT24013() {
+        books = new ArrayList<>();
+    }
+
+    // Add book
+    public void addBook(String book) {
+        books.add(book);
+    }
+
+    // Display books
+    public void displayBooks() {
+
+        System.out.println("Books in the Library:");
+
+        for(String book : books){
+            System.out.println(book);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        IT24013 myLibrary = new IT24013();
+
+        myLibrary.addBook("The Great Gatsby");
+        myLibrary.addBook("To Kill a Mockingbird");
+
+        myLibrary.displayBooks();
+    }
+}

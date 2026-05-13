@@ -1,0 +1,18 @@
+import java.io.File;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        File myFile = new File("example.txt");
+
+        if(myFile.exists()) {
+
+            System.out.println("File exists.");
+        }
+        else {
+
+            System.out.println("File does not exist.");
+        }
+    }
+}

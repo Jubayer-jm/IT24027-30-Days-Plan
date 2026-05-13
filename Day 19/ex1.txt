@@ -1,0 +1,37 @@
+import java.io.File;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Directory path
+        String directoryPath = "Projects/Java";
+
+        // Create File object
+        File directory =
+                new File(directoryPath);
+
+        // Check and create directory
+        if(!directory.exists()) {
+
+            boolean created =
+                    directory.mkdirs();
+
+            if(created) {
+
+                System.out.println(
+                        "Directory created successfully.");
+            }
+            else {
+
+                System.out.println(
+                        "Failed to create directory.");
+            }
+        }
+        else {
+
+            System.out.println(
+                    "Directory already exists.");
+        }
+    }
+}

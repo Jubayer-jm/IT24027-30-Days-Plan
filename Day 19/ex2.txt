@@ -1,0 +1,33 @@
+import java.io.File;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        String directoryPath =
+                "Projects/Java";
+
+        File directory =
+                new File(directoryPath);
+
+        // Get all files/folders
+        String[] contents =
+                directory.list();
+
+        if(contents != null) {
+
+            System.out.println(
+                    "Directory Contents:");
+
+            for(String fileName : contents) {
+
+                System.out.println(fileName);
+            }
+        }
+        else {
+
+            System.out.println(
+                    "Directory is empty or not found.");
+        }
+    }
+}

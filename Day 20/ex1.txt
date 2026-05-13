@@ -1,0 +1,14 @@
+import java.time.LocalDate;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Get current date
+        LocalDate today =
+                LocalDate.now();
+
+        System.out.println(
+                "Today's date: " + today);
+    }
+}

@@ -1,0 +1,26 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Current date
+        LocalDate currentDate =
+                LocalDate.now();
+
+        // Define format
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofPattern(
+                        "dd/MM/yyyy");
+
+        // Format date
+        String formattedDate =
+                currentDate.format(formatter);
+
+        // Print result
+        System.out.println(
+                "Formatted Date: "
+                + formattedDate);
+    }
+}
