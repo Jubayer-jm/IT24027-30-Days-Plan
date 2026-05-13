@@ -813,3 +813,821 @@ Date : 01 - 05 - 2026
 Topic : Maps : Using collection in real world scenario
 
 Video Link : https://www.youtube.com/watch?v=gtmBSl10DvY\\\&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj\\\&index=15
+Date : 02/05/2025
+
+Day #14
+
+Topic : Library Management using ArrayList, Order Management using HashMap
+
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2014
+
+Video : https://www.youtube.com/watch?v=gtmBSl10DvY&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=15
+
+Example #01
+
+import java.util.ArrayList;
+
+public class IT24013 {
+
+private ArrayList<String> books;
+
+// Constructor
+public IT24013() {
+    books = new ArrayList<>();
+}
+
+// Add book
+public void addBook(String book) {
+    books.add(book);
+}
+
+// Display books
+public void displayBooks() {
+
+    System.out.println("Books in the Library:");
+
+    for(String book : books){
+        System.out.println(book);
+    }
+}
+
+public static void main(String[] args) {
+
+    IT24013 myLibrary = new IT24013();
+
+    myLibrary.addBook("The Great Gatsby");
+    myLibrary.addBook("To Kill a Mockingbird");
+
+    myLibrary.displayBooks();
+}
+}
+
+Example #02
+
+import java.util.HashMap;
+
+public class IT24013 {
+
+private HashMap<Integer, String> orders;
+
+// Constructor
+public IT24013() {
+    orders = new HashMap<>();
+}
+
+// Add order
+public void addOrder(int orderId, String customerName) {
+
+    orders.put(orderId, customerName);
+}
+
+// Display orders
+public void displayOrders() {
+
+    System.out.println("Customer Orders:");
+
+    for(int orderId : orders.keySet()) {
+
+        System.out.println("Order ID: " +
+                orderId +
+                ", Customer Name: " +
+                orders.get(orderId));
+    }
+}
+
+public static void main(String[] args) {
+
+    IT24013 orderManagement =
+            new IT24013();
+
+    orderManagement.addOrder(101, "Alice");
+    orderManagement.addOrder(102, "Bob");
+
+    orderManagement.displayOrders();
+}
+}
+
+Date : 03/05/2025
+
+Day #15
+
+Topic : Write to File, Read from File
+
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2015
+Video : https://www.youtube.com/watch?v=63c8XmiOrzo&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=16
+
+Example #01
+
+import java.io.BufferedWriter; import java.io.FileWriter; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    try {
+
+        FileWriter writer =
+                new FileWriter("output.txt");
+
+        BufferedWriter bufferedWriter =
+                new BufferedWriter(writer);
+
+        bufferedWriter.write("Hello, World!");
+        bufferedWriter.newLine();
+
+        bufferedWriter.write(
+                "This is a Java file handling example.");
+
+        bufferedWriter.close();
+
+        System.out.println(
+                "Data written to file successfully.");
+
+    } catch (IOException e) {
+
+        System.out.println(
+                "An error occurred: " + e.getMessage());
+    }
+}
+}
+
+Example #02
+
+import java.io.BufferedReader; import java.io.FileReader; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    try {
+
+        FileReader reader =
+                new FileReader("output.txt");
+
+        BufferedReader bufferedReader =
+                new BufferedReader(reader);
+
+        String line;
+
+        while((line = bufferedReader.readLine()) != null){
+
+            System.out.println(line);
+        }
+
+        bufferedReader.close();
+
+    } catch (IOException e) {
+
+        System.out.println(
+                "An error occurred: " + e.getMessage());
+    }
+}
+}
+
+Date : 04/05/2025
+
+Day #16
+
+Topic : Check File Exists, Write to File, Read from File
+
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2016
+Video : https://www.youtube.com/watch?v=63c8XmiOrzo&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=16&t=1s
+
+Example #01
+
+import java.io.File;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    File myFile = new File("example.txt");
+
+    // Check file exists
+    if(myFile.exists()){
+
+        System.out.println("File exists.");
+    }
+    else{
+
+        System.out.println("File does not exist.");
+    }
+}
+}
+
+Example #02
+
+import java.io.BufferedWriter; import java.io.FileWriter; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    try{
+
+        FileWriter writer =
+                new FileWriter("output.txt");
+
+        BufferedWriter bufferedWriter =
+                new BufferedWriter(writer);
+
+        bufferedWriter.write("Hello, World!");
+        bufferedWriter.newLine();
+
+        bufferedWriter.write(
+                "This is a Java file handling example.");
+
+        bufferedWriter.close();
+
+        System.out.println(
+                "Data written successfully.");
+
+    }
+    catch(IOException e){
+
+        System.out.println(
+                "An error occurred: " +
+                        e.getMessage());
+    }
+}
+}
+
+Example #03
+
+import java.io.BufferedReader; import java.io.FileReader; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    try{
+
+        FileReader reader =
+                new FileReader("output.txt");
+
+        BufferedReader bufferedReader =
+                new BufferedReader(reader);
+
+        String line;
+
+        while((line =
+                bufferedReader.readLine()) != null){
+
+            System.out.println(line);
+        }
+
+        bufferedReader.close();
+    }
+
+    catch(IOException e){
+
+        System.out.println(
+                "An error occurred: " +
+                        e.getMessage());
+    }
+}
+}
+
+Date : 05/05/2025
+
+Day #17
+
+Topic : Read Bytes from File, Write Bytes to File, Copy File Using Byte Stream
+
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2017
+
+Video : https://www.youtube.com/watch?v=NIxcCzJOj3c&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=17
+
+Example #01
+
+import java.io.FileInputStream; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    FileInputStream fileInputStream = null;
+
+    try {
+
+        // Open file
+        fileInputStream =
+                new FileInputStream("example.txt");
+
+        int byteData;
+
+        // Read bytes until end of file
+        while((byteData =
+                fileInputStream.read()) != -1) {
+
+            // Convert byte to character
+            System.out.print((char) byteData);
+        }
+
+    }
+    catch (IOException e) {
+
+        e.printStackTrace();
+    }
+
+    finally {
+
+        // Close stream
+        if(fileInputStream != null) {
+
+            try {
+
+                fileInputStream.close();
+            }
+            catch (IOException e) {
+
+                e.printStackTrace();
+            }
+        }
+    }
+}
+}
+
+Example #02
+
+import java.io.FileOutputStream; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    FileOutputStream fileOutputStream = null;
+
+    try {
+
+        // Create output stream
+        fileOutputStream =
+                new FileOutputStream("output.txt");
+
+        String data = "Hello, World!";
+
+        // Convert string to bytes
+        byte[] byteData = data.getBytes();
+
+        // Write bytes
+        fileOutputStream.write(byteData);
+
+        System.out.println(
+                "Data written successfully.");
+
+    }
+    catch (IOException e) {
+
+        e.printStackTrace();
+    }
+
+    finally {
+
+        // Close stream
+        if(fileOutputStream != null) {
+
+            try {
+
+                fileOutputStream.close();
+            }
+            catch (IOException e) {
+
+                e.printStackTrace();
+            }
+        }
+    }
+}
+}
+
+Example #03
+
+import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    FileInputStream inputFile = null;
+    FileOutputStream outputFile = null;
+
+    try {
+
+        // Read source file
+        inputFile =
+                new FileInputStream("source.txt");
+
+        // Write destination file
+        outputFile =
+                new FileOutputStream("destination.txt");
+
+        int byteData;
+
+        // Copy bytes
+        while((byteData =
+                inputFile.read()) != -1) {
+
+            outputFile.write(byteData);
+        }
+
+        System.out.println(
+                "File copied successfully.");
+
+    }
+    catch (IOException e) {
+
+        e.printStackTrace();
+    }
+
+    finally {
+
+        // Close streams
+        try {
+
+            if(inputFile != null)
+                inputFile.close();
+
+            if(outputFile != null)
+                outputFile.close();
+
+        }
+        catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+}
+}
+
+Date : 06/05/2025
+
+Day #18
+
+Topic : Check if File Exists, Write Data to File using BufferedWriter, Read Data from File using BufferedReader
+
+Source Code : https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2018
+
+Video : https://www.youtube.com/watch?v=u0SsmS1wFWA&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=18
+
+Example #01
+
+import java.io.File;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    File myFile = new File("example.txt");
+
+    if(myFile.exists()) {
+
+        System.out.println("File exists.");
+    }
+    else {
+
+        System.out.println("File does not exist.");
+    }
+}
+}
+
+Example #02
+
+import java.io.BufferedWriter; import java.io.FileWriter; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    try {
+
+        FileWriter writer =
+                new FileWriter("output.txt");
+
+        BufferedWriter bufferedWriter =
+                new BufferedWriter(writer);
+
+        bufferedWriter.write("Hello, World!");
+
+        bufferedWriter.newLine();
+
+        bufferedWriter.write(
+                "This is a Java file handling example.");
+
+        bufferedWriter.close();
+
+        System.out.println(
+                "Data written to file successfully.");
+
+    }
+    catch(IOException e) {
+
+        System.out.println(
+                "An error occurred: "
+                + e.getMessage());
+    }
+}
+}
+
+Example #03 import java.io.BufferedReader; import java.io.FileReader; import java.io.IOException;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    try {
+
+        FileReader reader =
+                new FileReader("output.txt");
+
+        BufferedReader bufferedReader =
+                new BufferedReader(reader);
+
+        String line;
+
+        while((line =
+                bufferedReader.readLine()) != null) {
+
+            System.out.println(line);
+        }
+
+        bufferedReader.close();
+    }
+    catch(IOException e) {
+
+        System.out.println(
+                "An error occurred: "
+                + e.getMessage());
+    }
+}
+}
+
+Date : 07/05/2025
+
+Day #19
+
+Topic : Create Directory using File Class, List Directory Contents, Delete Directory
+
+Source Code : https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2019
+
+Video : https://www.youtube.com/watch?v=svLv3q-_Fl0&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=19
+
+Example #01
+
+import java.io.File;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    // Directory path
+    String directoryPath = "Projects/Java";
+
+    // Create File object
+    File directory =
+            new File(directoryPath);
+
+    // Check and create directory
+    if(!directory.exists()) {
+
+        boolean created =
+                directory.mkdirs();
+
+        if(created) {
+
+            System.out.println(
+                    "Directory created successfully.");
+        }
+        else {
+
+            System.out.println(
+                    "Failed to create directory.");
+        }
+    }
+    else {
+
+        System.out.println(
+                "Directory already exists.");
+    }
+}
+}
+
+Example #02
+
+import java.io.File;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    String directoryPath =
+            "Projects/Java";
+
+    File directory =
+            new File(directoryPath);
+
+    // Get all files/folders
+    String[] contents =
+            directory.list();
+
+    if(contents != null) {
+
+        System.out.println(
+                "Directory Contents:");
+
+        for(String fileName : contents) {
+
+            System.out.println(fileName);
+        }
+    }
+    else {
+
+        System.out.println(
+                "Directory is empty or not found.");
+    }
+}
+}
+
+Example #03
+
+import java.io.File;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    String directoryPath =
+            "Projects/Java";
+
+    File directory =
+            new File(directoryPath);
+
+    if(directory.exists()) {
+
+        boolean deleted =
+                directory.delete();
+
+        if(deleted) {
+
+            System.out.println(
+                    "Directory deleted successfully.");
+        }
+        else {
+
+            System.out.println(
+                    "Failed to delete directory.");
+        }
+    }
+    else {
+
+        System.out.println(
+                "Directory does not exist.");
+    }
+}
+}
+
+Date : 08/05/2025
+
+Day #20
+
+Topic : LocalDate, LocalDateTime, ZonedDateTime
+
+Source Code :https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2020
+Video : https://www.youtube.com/watch?v=rs1WKrln-9U&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=20
+
+Example #01
+
+import java.time.LocalDate;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    // Get current date
+    LocalDate today =
+            LocalDate.now();
+
+    System.out.println(
+            "Today's date: " + today);
+}
+}
+
+Example #02
+
+import java.time.LocalDateTime;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    // Get current date and time
+    LocalDateTime now =
+            LocalDateTime.now();
+
+    System.out.println(
+            "Current date and time: "
+            + now);
+}
+}
+
+Example #03
+
+import java.time.ZonedDateTime;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    // Get date and time with timezone
+    ZonedDateTime zonedNow =
+            ZonedDateTime.now();
+
+    System.out.println(
+            "Current date and time with zone: "
+            + zonedNow);
+}
+}
+
+Date : 09/05/2025
+
+Day #21
+
+Topic : Formatting Date using DateTimeFormatter, Parsing and Formatting User Birthdate,
+
+Source Code : https://github.com/Jubayer-jm/IT24027-30-Days-Plan/tree/main/Day%2021
+
+Video : https://www.youtube.com/watch?v=ieveCaLfrlE&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=21
+
+Example #01
+
+import java.time.LocalDate; import java.time.format.DateTimeFormatter;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    // Current date
+    LocalDate currentDate =
+            LocalDate.now();
+
+    // Define format
+    DateTimeFormatter formatter =
+            DateTimeFormatter.ofPattern(
+                    "dd/MM/yyyy");
+
+    // Format date
+    String formattedDate =
+            currentDate.format(formatter);
+
+    // Print result
+    System.out.println(
+            "Formatted Date: "
+            + formattedDate);
+}
+}
+
+Example #02
+
+import java.time.LocalDate; import java.time.format.DateTimeFormatter; import java.util.Scanner;
+
+public class IT24013 {
+
+public static void main(String[] args) {
+
+    Scanner scanner =
+            new Scanner(System.in);
+
+    // User name
+    System.out.print(
+            "Enter your name: ");
+
+    String name =
+            scanner.nextLine();
+
+    // User birthdate
+    System.out.print(
+            "Enter birthdate (yyyy-MM-dd): ");
+
+    String birthdateInput =
+            scanner.nextLine();
+
+    // Parse string to LocalDate
+    LocalDate birthdate =
+            LocalDate.parse(birthdateInput);
+
+    // Output format
+    DateTimeFormatter formatter =
+            DateTimeFormatter.ofPattern(
+                    "EEEE, MMM dd, yyyy");
+
+    // Format birthdate
+    String formattedBirthdate =
+            birthdate.format(formatter);
+
+    // Display result
+    System.out.println(
+            "Hello " + name
+            + "! Your birthdate is: "
+            + formattedBirthdate);
+
+    scanner.close();
+}
+}
